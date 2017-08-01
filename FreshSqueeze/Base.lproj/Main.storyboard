@@ -1,24 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Medium</string>
+            <string>Avenir-MediumOblique</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Entry View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="EntryViewController" customModule="FreshSqueeze" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LookEast" translatesAutoresizingMaskIntoConstraints="NO" id="UAY-L0-1uR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jkH-db-8zq">
+                                <rect key="frame" x="20" y="185" width="280" height="194"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFR-y5-DYY" customClass="CustomNextButton" customModule="FreshSqueeze" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.46305567781690143" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                        <state key="normal" title="Read Reviews">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="readReviewTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hk-rg-jjE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k9-ZB-jGy" customClass="CustomNextButton" customModule="FreshSqueeze" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="78" width="280" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.46305567780000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                        <state key="normal" title="Write a Review">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="writeReviewTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFX-VD-81I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzn-7d-hgj" customClass="CustomNextButton" customModule="FreshSqueeze" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="156" width="280" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.46305567780000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                        <state key="normal" title="Subscriptions">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="subscribeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ENI-Hd-9Gy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=compact" spacing="40"/>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="100"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Fresh Squeeze" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWd-7D-16I">
+                                <rect key="frame" x="12" y="42" width="296" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="squeeze" translatesAutoresizingMaskIntoConstraints="NO" id="3q7-Ez-m1G">
+                                <rect key="frame" x="107.5" y="95" width="105" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3q7-Ez-m1G" secondAttribute="height" multiplier="3:2" id="6Ke-fE-O6l"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jkH-db-8zq" secondAttribute="trailing" constant="20" id="6ar-C8-JLX"/>
+                            <constraint firstItem="UAY-L0-1uR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="94l-q0-Cxv"/>
+                            <constraint firstItem="UAY-L0-1uR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I7t-CL-3zb"/>
+                            <constraint firstItem="lWd-7D-16I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J1T-hG-dxV"/>
+                            <constraint firstItem="jkH-db-8zq" firstAttribute="top" secondItem="3q7-Ez-m1G" secondAttribute="bottom" constant="20" id="NFv-n3-Ldf"/>
+                            <constraint firstItem="jkH-db-8zq" firstAttribute="top" secondItem="lWd-7D-16I" secondAttribute="bottom" constant="110" id="OVn-CE-CF5"/>
+                            <constraint firstItem="UAY-L0-1uR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qpe-cd-gen"/>
+                            <constraint firstItem="lWd-7D-16I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="cCh-mg-yFh"/>
+                            <constraint firstItem="3q7-Ez-m1G" firstAttribute="top" secondItem="lWd-7D-16I" secondAttribute="bottom" constant="20" id="edi-pM-f4j"/>
+                            <constraint firstItem="jkH-db-8zq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leh-iY-Wz8"/>
+                            <constraint firstItem="UAY-L0-1uR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mHj-0S-Yko"/>
+                            <constraint firstItem="3q7-Ez-m1G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wiJ-8o-64j"/>
+                            <constraint firstItem="jkH-db-8zq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zkq-td-Ron"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="nug-GT-eJu" kind="show" identifier="writing" id="cvu-Y5-YIT"/>
+                        <segue destination="Twb-bO-Mti" kind="show" identifier="reading" id="TEP-8e-DnG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Read View Controller-->
+        <scene sceneID="KO3-iM-TAc">
+            <objects>
+                <viewController id="Twb-bO-Mti" customClass="ReadViewController" customModule="FreshSqueeze" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jhM-qe-7DZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LookWest" translatesAutoresizingMaskIntoConstraints="NO" id="Js4-ia-RCz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read a Review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLU-xB-isz">
+                                <rect key="frame" x="54.5" y="40" width="211.5" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Category:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYB-Ln-Cqj">
+                                <rect key="frame" x="74.5" y="104" width="171" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ye9-rg-bPi">
+                                <rect key="frame" x="136" y="263" width="48" height="43"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="MG5-84-1Rl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SYB-Ln-Cqj" firstAttribute="centerX" secondItem="jhM-qe-7DZ" secondAttribute="centerX" id="B5H-Bz-Jg7"/>
+                            <constraint firstItem="Ye9-rg-bPi" firstAttribute="centerX" secondItem="jhM-qe-7DZ" secondAttribute="centerX" id="Ioz-K9-X9j"/>
+                            <constraint firstItem="Ye9-rg-bPi" firstAttribute="centerY" secondItem="jhM-qe-7DZ" secondAttribute="centerY" id="Jaw-zf-fMF"/>
+                            <constraint firstItem="Js4-ia-RCz" firstAttribute="leading" secondItem="s1U-gQ-y2f" secondAttribute="leading" id="Ogk-fA-UNh"/>
+                            <constraint firstItem="iLU-xB-isz" firstAttribute="centerX" secondItem="jhM-qe-7DZ" secondAttribute="centerX" id="fvD-0q-tkK"/>
+                            <constraint firstItem="SYB-Ln-Cqj" firstAttribute="top" secondItem="iLU-xB-isz" secondAttribute="bottom" constant="20" id="g5h-oZ-hhx"/>
+                            <constraint firstItem="iLU-xB-isz" firstAttribute="top" secondItem="s1U-gQ-y2f" secondAttribute="top" constant="20" id="gZ6-Kz-B5Y"/>
+                            <constraint firstItem="Js4-ia-RCz" firstAttribute="trailing" secondItem="s1U-gQ-y2f" secondAttribute="trailing" id="mnr-Eo-wQa"/>
+                            <constraint firstItem="Js4-ia-RCz" firstAttribute="top" secondItem="jhM-qe-7DZ" secondAttribute="top" id="rJw-Tz-hfA"/>
+                            <constraint firstItem="Js4-ia-RCz" firstAttribute="bottom" secondItem="s1U-gQ-y2f" secondAttribute="bottom" id="zga-Yb-klB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s1U-gQ-y2f"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E68-iC-ezV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076.8115942028987" y="538.85869565217399"/>
+        </scene>
+        <!--Write View Controller-->
+        <scene sceneID="dLN-CX-1nq">
+            <objects>
+                <viewController id="nug-GT-eJu" customClass="WriteViewController" customModule="FreshSqueeze" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9kz-XT-qKs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pano" translatesAutoresizingMaskIntoConstraints="NO" id="OR8-xX-vbv">
+                                <rect key="frame" x="0.0" y="0.0" width="338" height="622"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-fv-poh">
+                                <rect key="frame" x="55.5" y="40" width="209" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Category:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eg-ey-gYP">
+                                <rect key="frame" x="72" y="104" width="176" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3eg-ey-gYP" secondAttribute="height" multiplier="85:14" id="56v-aA-XGr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7h-w3-xq1">
+                                <rect key="frame" x="136" y="262.5" width="48" height="43"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="H2T-xa-rTk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OFs-fv-poh" firstAttribute="centerX" secondItem="9kz-XT-qKs" secondAttribute="centerX" id="0FD-vm-TQ6"/>
+                            <constraint firstItem="M7h-w3-xq1" firstAttribute="centerX" secondItem="9kz-XT-qKs" secondAttribute="centerX" id="BPg-Pe-dcI"/>
+                            <constraint firstItem="3eg-ey-gYP" firstAttribute="centerX" secondItem="9kz-XT-qKs" secondAttribute="centerX" id="IWc-l8-lgI"/>
+                            <constraint firstItem="M7h-w3-xq1" firstAttribute="centerY" secondItem="9kz-XT-qKs" secondAttribute="centerY" id="muk-Vu-8pa"/>
+                            <constraint firstItem="3eg-ey-gYP" firstAttribute="top" secondItem="OFs-fv-poh" secondAttribute="bottom" constant="20" id="nhS-nD-0aA"/>
+                            <constraint firstItem="OFs-fv-poh" firstAttribute="top" secondItem="nqJ-7I-tcE" secondAttribute="top" constant="20" id="wnn-Vs-X38"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nqJ-7I-tcE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Inm-6D-FED" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078.125" y="-167.95774647887325"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LookEast" width="3264" height="2448"/>
+        <image name="LookWest" width="3264" height="2448"/>
+        <image name="Pano" width="7244" height="2418"/>
+        <image name="squeeze" width="450" height="450"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MG5-84-1Rl"/>
+    </inferredMetricsTieBreakers>
 </document>

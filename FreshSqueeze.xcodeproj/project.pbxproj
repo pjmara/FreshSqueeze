@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		0698179B1F2BCA680080C29A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0698179A1F2BCA680080C29A /* AppDelegate.swift */; };
-		0698179D1F2BCA680080C29A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0698179C1F2BCA680080C29A /* ViewController.swift */; };
+		0698179D1F2BCA680080C29A /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0698179C1F2BCA680080C29A /* EntryViewController.swift */; };
 		069817A01F2BCA680080C29A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0698179E1F2BCA680080C29A /* Main.storyboard */; };
 		069817A21F2BCA680080C29A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 069817A11F2BCA680080C29A /* Assets.xcassets */; };
 		069817A51F2BCA680080C29A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 069817A31F2BCA680080C29A /* LaunchScreen.storyboard */; };
+		06F3B4631F2D2CE8008E49D0 /* CustomNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F3B4621F2D2CE8008E49D0 /* CustomNextButton.swift */; };
+		06F3B4651F2D3681008E49D0 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F3B4641F2D3681008E49D0 /* ReadViewController.swift */; };
+		06F3B4671F2D37BA008E49D0 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F3B4661F2D37BA008E49D0 /* WriteViewController.swift */; };
+		06F3B4691F2D39EC008E49D0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F3B4681F2D39EC008E49D0 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		069817971F2BCA680080C29A /* FreshSqueeze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshSqueeze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0698179A1F2BCA680080C29A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0698179C1F2BCA680080C29A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0698179C1F2BCA680080C29A /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		0698179F1F2BCA680080C29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		069817A11F2BCA680080C29A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		069817A41F2BCA680080C29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		069817A61F2BCA680080C29A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F3B4621F2D2CE8008E49D0 /* CustomNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNextButton.swift; sourceTree = "<group>"; };
+		06F3B4641F2D3681008E49D0 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
+		06F3B4661F2D37BA008E49D0 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		06F3B4681F2D39EC008E49D0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,34 @@
 		069817991F2BCA680080C29A /* FreshSqueeze */ = {
 			isa = PBXGroup;
 			children = (
+				06F3B4611F2D2CAA008E49D0 /* Models */,
+				06F3B45D1F2D2B2E008E49D0 /* ViewControllers */,
 				0698179A1F2BCA680080C29A /* AppDelegate.swift */,
-				0698179C1F2BCA680080C29A /* ViewController.swift */,
 				0698179E1F2BCA680080C29A /* Main.storyboard */,
 				069817A11F2BCA680080C29A /* Assets.xcassets */,
 				069817A31F2BCA680080C29A /* LaunchScreen.storyboard */,
 				069817A61F2BCA680080C29A /* Info.plist */,
 			);
 			path = FreshSqueeze;
+			sourceTree = "<group>";
+		};
+		06F3B45D1F2D2B2E008E49D0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0698179C1F2BCA680080C29A /* EntryViewController.swift */,
+				06F3B4641F2D3681008E49D0 /* ReadViewController.swift */,
+				06F3B4661F2D37BA008E49D0 /* WriteViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		06F3B4611F2D2CAA008E49D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				06F3B4621F2D2CE8008E49D0 /* CustomNextButton.swift */,
+				06F3B4681F2D39EC008E49D0 /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0698179D1F2BCA680080C29A /* ViewController.swift in Sources */,
+				06F3B4691F2D39EC008E49D0 /* Person.swift in Sources */,
+				0698179D1F2BCA680080C29A /* EntryViewController.swift in Sources */,
 				0698179B1F2BCA680080C29A /* AppDelegate.swift in Sources */,
+				06F3B4651F2D3681008E49D0 /* ReadViewController.swift in Sources */,
+				06F3B4671F2D37BA008E49D0 /* WriteViewController.swift in Sources */,
+				06F3B4631F2D2CE8008E49D0 /* CustomNextButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z276H9S573;
 				INFOPLIST_FILE = FreshSqueeze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phantasmicapps.FreshSqueeze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z276H9S573;
 				INFOPLIST_FILE = FreshSqueeze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phantasmicapps.FreshSqueeze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
