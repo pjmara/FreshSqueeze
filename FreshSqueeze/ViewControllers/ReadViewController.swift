@@ -20,6 +20,7 @@ class ReadViewController: UIViewController, UITableViewDataSource, UITableViewDe
         categoryTable.delegate = self
         
         print(person.desiredTask)
+        print("hello")
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
