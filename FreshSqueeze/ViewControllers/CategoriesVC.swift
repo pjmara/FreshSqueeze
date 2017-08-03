@@ -1,27 +1,24 @@
 //
-//  ReadViewController.swift
-//  FreshSqueeze
+//  ViewController.swift
+//  coder-swag
 //
-//  Created by P Mara on 7/29/17.
-//  Copyright © 2017 Phantasmic Apps. All rights reserved.
+//  Created by Mark Price on 6/27/17.
+//  Copyright © 2017 Devslopes. All rights reserved.
 //
 
 import UIKit
 
-class ReadViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    var person: Person!
+class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var categoryTable: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryTable.dataSource = self
         categoryTable.delegate = self
-        
-        print(person.desiredTask)
     }
-
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.instance.getCategories().count
     }
@@ -35,22 +32,33 @@ class ReadViewController: UIViewController, UITableViewDataSource, UITableViewDe
             return CategoryCell()
         }
     }
-        
     
-
-        // Do any additional setup after loading the view.
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "ProductsVC", sender: category)
     }
     
-
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let ReverseVC = segue.destination as? EntryViewController {
-            ReverseVC.person = person
-            
+        if let productsVC = segue.destination as? ProductsVC {
+            let barBtn = UIBarButtonItem()
+            barBtn.title = ""
+            navigationItem.backBarButtonItem = barBtn
+            assert(sender as? Category != nil)
+            productsVC.initProducts(category: sender as! Category)
         }
+    }
+    
 }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
